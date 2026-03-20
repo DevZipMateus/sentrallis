@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentrallis Peças</title>
+  <meta name="description" content="Sentrallis Peças — A força que move sua máquina. Distribuição especializada de peças para máquinas pesadas: construção civil, mineração, agronegócio e florestal. Entrega em todo o Brasil.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F0F0F">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sentrallis Peças">
+  <meta property="og:description" content="A força que move sua máquina. Peças para máquinas pesadas com procedência garantida e entrega ágil em todo o Brasil.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sentrallis.com.br/">
+  <meta property="og:image" content="images/og-image.png">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sentrallis Peças">
+  <meta name="twitter:description" content="A força que move sua máquina. Peças para máquinas pesadas.">
+  <meta name="twitter:image" content="images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visualizar imagem" aria-hidden="true">
+    <button class="lightbox-fechar" id="lightboxFechar" aria-label="Fechar"><i class="fas fa-times"></i></button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Imagem anterior"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Próxima imagem"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-conteudo">
+      <img src="" alt="" id="lightboxImg" class="lightbox-img">
+    </div>
+    <div class="lightbox-contador" id="lightboxContador"></div>
+  </div>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <img src="images/logo.png" alt="Sentrallis Peças" class="loader-logo">
+      <div class="loader-barra-container">
+        <div class="loader-barra" id="loaderBarra"></div>
+      </div>
+      <p class="loader-texto">Carregando<span class="loader-dots"></span></p>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="header-container">
+      <a href="#inicio" class="logo" aria-label="Sentrallis Peças — Página inicial">
+        <img src="images/logo.png" alt="Logo Sentrallis Peças" class="logo-img">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Menu principal">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <!-- SUBSTITUA "NUMERO_AQUI" pelo número com DDI+DDD, ex: 5567999991234 -->
+      <a href="https://wa.me/55NUMERO_AQUI" class="header-whatsapp" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MENU MOBILE ===== -->
+  <nav id="navMenu" class="mobile-nav" aria-label="Menu mobile" aria-hidden="true">
+    <a href="#inicio" class="nav-link">Início</a>
+    <a href="#sobre" class="nav-link">Sobre</a>
+    <a href="#produtos" class="nav-link">Produtos</a>
+    <a href="#servicos" class="nav-link">Serviços</a>
+    <a href="#galeria" class="nav-link">Galeria</a>
+    <a href="#depoimentos" class="nav-link">Depoimentos</a>
+    <a href="#contato" class="nav-link">Contato</a>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="inicio" class="hero">
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-grade" aria-hidden="true"></div>
+
+    <div class="hero-conteudo">
+      <div class="hero-linha-topo" aria-hidden="true"></div>
+      <span class="hero-tag">+20 anos de experiência no setor</span>
+      <h1><img src="images/logo.png" alt="Sentrallis Peças" class="hero-logo"></h1>
+      <h2>A força que move sua máquina</h2>
+      <p>Distribuição especializada de peças para máquinas pesadas com procedência garantida, suporte técnico e entrega ágil em todo o Brasil.</p>
+      <div class="hero-botoes">
+        <a href="https://wa.me/55NUMERO_AQUI" class="btn-primario" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> Solicitar peça
+        </a>
+        <a href="#produtos" class="btn-contorno">
+          <i class="fas fa-th-large" aria-hidden="true"></i> Ver categorias
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>+20</strong><span>anos de estrada</span>
+        </div>
+        <div class="hero-stat-div" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <strong>4</strong><span>segmentos atendidos</span>
+        </div>
+        <div class="hero-stat-div" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <strong>100%</strong><span>procedência garantida</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+
+        <div class="sobre-visual">
+          <div class="sobre-img-box">
+            <div class="sobre-img-inner">
+              <i class="fas fa-industry" aria-hidden="true"></i>
+            </div>
+            <div class="sobre-badge-anos">
+              <strong>+20</strong>
+              <span>anos de estrada</span>
+            </div>
+          </div>
+          <div class="sobre-numeros">
+            <div class="sobre-num">
+              <strong>4</strong><span>segmentos</span>
+            </div>
+            <div class="sobre-num">
+              <strong>Brasil</strong><span>entregas</span>
+            </div>
+            <div class="sobre-num">
+              <strong>100%</strong><span>procedência</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sobre-texto">
+          <span class="etiqueta">Nossa história</span>
+          <h2>Mais de 20 anos conhecendo cada máquina pelo nome</h2>
+          <p>Antes de existir a Sentrallis Peças, já existia a paixão pela complexidade das peças, pelo barulho dos motores em campos de construção — de hidroelétricas a terraplanagem.</p>
+          <p>A empresa nasceu com um propósito claro: unir o conhecimento técnico de quem viveu o dia a dia do setor com a agilidade que o mercado exige. Não somos apenas um fornecedor; somos o braço direito do cliente — com a certeza de que cada componente tem a curadoria de quem sabe o peso que ele carrega.</p>
+          <p>Hoje, carregamos no DNA mais de 20 anos de estrada. Não vendemos apenas peças; entregamos a tranquilidade de quem sabe que, por trás de uma máquina, existe um sonho, um projeto e uma família esperando resultados.</p>
+
+          <div class="mvv-grid">
+            <div class="mvv-card">
+              <div class="mvv-icone"><i class="fas fa-bullseye"></i></div>
+              <h3>Missão</h3>
+              <p>Oferecer soluções completas em peças para máquinas pesadas, garantindo agilidade, procedência e suporte especializado.</p>
+            </div>
+            <div class="mvv-card">
+              <div class="mvv-icone"><i class="fas fa-eye"></i></div>
+              <h3>Visão</h3>
+              <p>Ser a distribuidora de referência nacional até 2030, com excelência no atendimento e capilaridade logística.</p>
+            </div>
+            <div class="mvv-card">
+              <div class="mvv-icone"><i class="fas fa-shield-alt"></i></div>
+              <h3>Valores</h3>
+              <p>Qualidade, integridade, conhecimento técnico, agilidade e parceria de longo prazo com clientes e fornecedores.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MERCADO DE ATUAÇÃO ===== -->
+  <section class="mercado">
+    <div class="container">
+      <div class="mercado-grid">
+        <div class="mercado-item">
+          <i class="fas fa-hard-hat" aria-hidden="true"></i>
+          <h3>Construção civil</h3>
+          <p>Escavadeiras, carregadeiras, motoniveladoras</p>
+        </div>
+        <div class="mercado-item">
+          <i class="fas fa-mountain" aria-hidden="true"></i>
+          <h3>Mineração</h3>
+          <p>Caminhões fora-de-estrada, escavadeiras de grande porte</p>
+        </div>
+        <div class="mercado-item">
+          <i class="fas fa-tractor" aria-hidden="true"></i>
+          <h3>Agronegócio</h3>
+          <p>Tratores, colheitadeiras e equipamentos agrícolas</p>
+        </div>
+        <div class="mercado-item">
+          <i class="fas fa-tree" aria-hidden="true"></i>
+          <h3>Florestal</h3>
+          <p>Harvesters, forwarders e equipamentos florestais</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUTOS ===== -->
+  <section id="produtos" class="produtos">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <span class="etiqueta">Categorias de peças</span>
+        <h2>Tudo o que sua máquina precisa</h2>
+        <p>Trabalhamos com as principais categorias de componentes para manter sua frota operando com máxima eficiência</p>
+      </div>
+
+      <div class="produtos-grid">
+        <div class="produto-card">
+          <div class="produto-icone"><i class="fas fa-cog"></i></div>
+          <h3>Motor</h3>
+          <p>Componentes e peças de reposição para motores de máquinas pesadas de todas as marcas.</p>
+        </div>
+        <div class="produto-card">
+          <div class="produto-icone"><i class="fas fa-cogs"></i></div>
+          <h3>Transmissão</h3>
+          <p>Embreagens, caixas de câmbio, conversores de torque e componentes de transmissão.</p>
+        </div>
+        <div class="produto-card destaque">
+          <div class="produto-icone"><i class="fas fa-circle-notch"></i></div>
+          <h3>Trem de rolagem</h3>
+          <p>Esteiras, roletes, coroas, rodas-guia e todos os componentes do sistema de locomoção.</p>
+        </div>
+        <div class="produto-card">
+          <div class="produto-icone"><i class="fas fa-tint"></i></div>
+          <h3>Sistema hidráulico</h3>
+          <p>Bombas, motores, cilindros, mangueiras e conexões hidráulicas de alta performance.</p>
+        </div>
+        <div class="produto-card">
+          <div class="produto-icone"><i class="fas fa-filter"></i></div>
+          <h3>Filtros</h3>
+          <p>Filtros de óleo, combustível, ar e hidráulico para manutenção preventiva eficiente.</p>
+        </div>
+        <div class="produto-card">
+          <div class="produto-icone"><i class="fas fa-wrench"></i></div>
+          <h3>Peças de desgaste</h3>
+          <p>Lâminas, dentes de caçamba, ponteiras e componentes de alta resistência ao desgaste.</p>
+        </div>
+        <div class="produto-card">
+          <div class="produto-icone"><i class="fas fa-bolt"></i></div>
+          <h3>Elétrica</h3>
+          <p>Sensores, chicotes, alternadores, motor de partida e componentes elétricos em geral.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section id="servicos" class="servicos">
+    <div class="container">
+      <div class="cabecalho-secao claro">
+        <span class="etiqueta claro">O que oferecemos</span>
+        <h2>Serviços que fazem a diferença</h2>
+        <p>Muito além de fornecer peças — somos parceiros na continuidade da sua operação</p>
+      </div>
+
+      <div class="servicos-grid">
+        <div class="servico-card">
+          <div class="servico-num">01</div>
+          <div class="servico-icone"><i class="fas fa-user-tie"></i></div>
+          <h3>Atendimento técnico especializado</h3>
+          <p>Identificação correta da peça por código ou número de chassi. Nossa equipe conhece o que está vendendo.</p>
+        </div>
+        <div class="servico-card">
+          <div class="servico-num">02</div>
+          <div class="servico-icone"><i class="fas fa-truck-fast"></i></div>
+          <h3>Logística ágil em todo o Brasil</h3>
+          <p>Entrega rápida para qualquer estado. Peça certa, no prazo certo, onde sua máquina está parada.</p>
+        </div>
+        <div class="servico-card">
+          <div class="servico-num">03</div>
+          <div class="servico-icone"><i class="fas fa-clipboard-check"></i></div>
+          <h3>Consultoria preventiva</h3>
+          <p>Orientação especializada para reduzir paradas não programadas e aumentar a vida útil dos seus equipamentos.</p>
+        </div>
+        <div class="servico-card">
+          <div class="servico-num">04</div>
+          <div class="servico-icone"><i class="fas fa-headset"></i></div>
+          <h3>Pós-venda e suporte</h3>
+          <p>Política clara de troca e devolução. Suporte contínuo após a venda para garantir sua satisfação total.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIA ===== -->
+  <section id="galeria" class="galeria">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <span class="etiqueta">Em ação</span>
+        <h2>Nossa estrutura e produtos</h2>
+        <p>Conheça nossa operação e o estoque de peças disponíveis</p>
+      </div>
+    </div>
+
+    <div class="swiper galeria-swiper">
+      <div class="swiper-wrapper" id="galeriaWrapper">
+        <!-- Imagens inseridas via JS -->
+      </div>
+      <div class="swiper-button-prev galeria-prev" aria-label="Anterior"></div>
+      <div class="swiper-button-next galeria-next" aria-label="Próximo"></div>
+    </div>
+
+    <p class="galeria-aviso" id="galeriaAviso">As imagens serão adicionadas em breve.</p>
+  </section>
+
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section id="depoimentos" class="depoimentos">
+    <div class="container">
+      <div class="cabecalho-secao claro">
+        <span class="etiqueta claro">O que dizem de nós</span>
+        <h2>Clientes que confiam na Sentrallis</h2>
+        <p>Cada depoimento representa uma máquina que voltou a trabalhar</p>
+      </div>
+
+      <div class="depoimentos-grid">
+
+        <article class="dep-card">
+          <div class="dep-estrelas" aria-label="5 estrelas">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Precisava de uma peça para uma escavadeira Komatsu que quebrou na obra. A equipe da Sentrallis me atendeu no WhatsApp rapidinho, confirmou o código certo e enviou no mesmo dia. Chegou antes do prazo. Recomendo!"</p>
+          <div class="dep-autor">
+            <div class="dep-avatar">CA</div>
+            <div>
+              <strong>Carlos Andrade</strong>
+              <span>Construtora Planalto</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="dep-card">
+          <div class="dep-estrelas" aria-label="5 estrelas">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Já comprei em vários lugares e sempre tinha erro de compatibilidade. Aqui na Sentrallis o vendedor pediu o número do chassi e acertou na mosca. Peça original, preço justo. Virei cliente."</p>
+          <div class="dep-autor">
+            <div class="dep-avatar">RM</div>
+            <div>
+              <strong>Roberto Mendes</strong>
+              <span>Mecânico Autônomo</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="dep-card">
+          <div class="dep-estrelas" aria-label="5 estrelas">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Minha motoniveladora estava parada há 3 dias. Ninguém tinha a peça. A Sentrallis localizou no estoque e entregou em 24h. Máquina voltou ao trabalho e eu não perdi o prazo da obra. Eternamente grato!"</p>
+          <div class="dep-autor">
+            <div class="dep-avatar">FL</div>
+            <div>
+              <strong>Fernando Lima</strong>
+              <span>Terraplanagem Lima</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="dep-card">
+          <div class="dep-estrelas" aria-label="5 estrelas">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Já tive más experiências com outras lojas que anunciavam um preço e depois queriam cobrar mais. A Sentrallis não. Preço certo, produto correto, entrega rápida. Parceria que quero manter."</p>
+          <div class="dep-autor">
+            <div class="dep-avatar">JF</div>
+            <div>
+              <strong>Joana Farias</strong>
+              <span>Frotista Agro</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="dep-card">
+          <div class="dep-estrelas" aria-label="4 estrelas">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <p>"A peça veio certinha e o atendimento foi excelente. O frete para o Pará demorou um pouco mais do que eu esperava, mas valeu a pena. Produto de qualidade."</p>
+          <div class="dep-autor">
+            <div class="dep-avatar">AS</div>
+            <div>
+              <strong>Adriano Santos</strong>
+              <span>Mineradora Norte</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="dep-card">
+          <div class="dep-estrelas" aria-label="5 estrelas">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Liguei perdido, sem saber qual peça comprar. O vendedor me orientou com paciência, explicou as diferenças entre as marcas e ainda me deu dicas de manutenção. Isso não se acha em qualquer lugar."</p>
+          <div class="dep-autor">
+            <div class="dep-avatar">MS</div>
+            <div>
+              <strong>Marcos Souza</strong>
+              <span>Operador de Máquinas</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contato" class="contato">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <span class="etiqueta">Fale conosco</span>
+        <h2>Sua máquina não pode esperar</h2>
+        <p>Entre em contato agora — nossa equipe técnica está pronta para te atender</p>
+      </div>
+
+      <div class="contato-grid">
+
+        <div class="contato-info">
+          <div class="contato-card">
+            <div class="contato-icone"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>Endereço</h3>
+            <p>Rua Serafim Carvalho, 359A</p>
+          </div>
+          <div class="contato-card">
+            <div class="contato-icone"><i class="fas fa-clock"></i></div>
+            <h3>Horário de funcionamento</h3>
+            <p>Segunda a sexta: 08h às 18h</p>
+          </div>
+          <div class="contato-card">
+            <div class="contato-icone"><i class="fas fa-envelope"></i></div>
+            <h3>E-mail</h3>
+            <p><a href="mailto:pecas@sentrallis.com">pecas@sentrallis.com</a></p>
+          </div>
+          <div class="contato-card">
+            <div class="contato-icone"><i class="fab fa-instagram"></i></div>
+            <h3>Instagram</h3>
+            <p><a href="https://instagram.com/pecas_4057" target="_blank" rel="noopener noreferrer">@pecas_4057</a></p>
+          </div>
+
+          <a href="https://wa.me/55NUMERO_AQUI" class="btn-primario btn-whatsapp-cta" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> Solicitar peça pelo WhatsApp
+          </a>
+        </div>
+
+        <div class="contato-mapa">
+          <iframe
+            src="https://maps.google.com/maps?q=Rua+Serafim+Carvalho+359A&output=embed&z=15&hl=pt-BR"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização da Sentrallis Peças"
+            aria-label="Mapa com localização da Sentrallis Peças">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-conteudo">
+        <div class="footer-marca">
+          <img src="images/logo.png" alt="Logo Sentrallis Peças" class="footer-logo">
+          <p>A força que move sua máquina.</p>
+        </div>
+        <nav class="footer-links" aria-label="Links do rodapé">
+          <a href="#inicio">Início</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#produtos">Produtos</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://instagram.com/pecas_4057" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Sentrallis">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://wa.me/55NUMERO_AQUI" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da Sentrallis">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:pecas@sentrallis.com" aria-label="E-mail da Sentrallis">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>© 2025 Sentrallis Peças · CNPJ 56.226.298/0001-07</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLUTUANTE ===== -->
+  <a href="https://wa.me/55NUMERO_AQUI" class="whatsapp-flutuante" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Sentrallis pelo WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- Rodapé MonteSite - Atualização Automática -->
+  <div id="montesite-footer-badge"></div>
+  <script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
