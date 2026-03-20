@@ -385,7 +385,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .cabecalho-secao h2.linha-ativa::after { width: 60%; }
 .cabecalho-secao p {
-  color: var(--cinza);
+  color: #4A4A4A;
   font-size: 1rem;
 }
 .cabecalho-secao.claro h2 { color: var(--branco); }
@@ -677,7 +677,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   line-height: 1.15;
 }
 .sobre-texto p {
-  color: var(--cinza);
+  color: #4A4A4A;
   font-size: 0.97rem;
   margin-bottom: 16px;
   line-height: 1.75;
@@ -837,7 +837,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .produto-card p {
   font-size: 0.83rem;
-  color: var(--cinza);
+  color: #555555;
   line-height: 1.6;
 }
 
@@ -917,7 +917,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .galeria-aviso {
   text-align: center;
-  color: var(--cinza);
+  color: var(--cinza-claro);
   font-size: 0.9rem;
   margin-top: 32px;
   display: none;
@@ -1070,7 +1070,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: var(--cinza-bg);
 }
 .contato .cabecalho-secao h2 { color: var(--preto); }
-.contato .cabecalho-secao p  { color: var(--cinza); }
+.contato .cabecalho-secao p  { color: #4A4A4A; }
 
 .contato-grid {
   display: grid;
@@ -1123,7 +1123,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--cinza);
+  color: #666666;
   margin-bottom: 4px;
 }
 .contato-card p, .contato-card a {
@@ -1185,7 +1185,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .footer-marca p {
   font-size: 0.82rem;
-  color: var(--cinza);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .footer-links {
@@ -1232,7 +1232,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .footer-base p {
   font-size: 0.78rem;
-  color: var(--cinza);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* ===== WHATSAPP FLUTUANTE ===== */
