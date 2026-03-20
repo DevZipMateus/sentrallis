@@ -115,9 +115,23 @@ document.querySelectorAll('.cabecalho-secao h2').forEach(h2 => {
 // ===== GALERIA — INSERIR IMAGENS VIA JS =====
 const galeriaWrapper = document.getElementById('galeriaWrapper');
 const galeriaAviso   = document.getElementById('galeriaAviso');
-const imagensGaleria = [];
-// Adicione os nomes dos arquivos aqui quando as imagens forem fornecidas:
-// ex: 'foto1.jpg', 'foto2.jpg', ...
+const imagensGaleria = [
+  'midia_1.jpg',
+  'midia_2.jpg',
+  'midia_3.jpg',
+  'midia_4.jpg',
+  'midia_5.jpg',
+  'midia_6.jpg',
+  'midia_7.jpg',
+  'midia_8.jpg',
+  'midia_9.jpg',
+  'midia_10.jpg',
+  'midia_11.jpg',
+  'midia_12.png',
+  'midia_13.png',
+  'midia_14.jpg',
+  'midia_15.jpg',
+];
 
 if (imagensGaleria.length > 0) {
   imagensGaleria.forEach((nome, i) => {
