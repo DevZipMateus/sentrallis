@@ -85,7 +85,7 @@
       </nav>
 
       <!-- SUBSTITUA "NUMERO_AQUI" pelo número com DDI+DDD, ex: 5567999991234 -->
-      <a href="https://wa.me/55NUMERO_AQUI" class="header-whatsapp" target="_blank" rel="noopener noreferrer">
+      <a href="#" onclick="abrirWaModal(event)" class="header-whatsapp" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
       </a>
 
@@ -118,7 +118,7 @@
       <h2>A força que move sua máquina</h2>
       <p>Distribuição especializada de peças para máquinas pesadas com procedência garantida, suporte técnico e entrega ágil em todo o Brasil.</p>
       <div class="hero-botoes">
-        <a href="https://wa.me/55NUMERO_AQUI" class="btn-primario" target="_blank" rel="noopener noreferrer">
+        <a href="#" onclick="abrirWaModal(event)" class="btn-primario" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-whatsapp" aria-hidden="true"></i> Solicitar peça
         </a>
         <a href="#produtos" class="btn-contorno">
@@ -472,7 +472,7 @@
             <p><a href="https://instagram.com/pecas_4057" target="_blank" rel="noopener noreferrer">@pecas_4057</a></p>
           </div>
 
-          <a href="https://wa.me/55NUMERO_AQUI" class="btn-primario btn-whatsapp-cta" target="_blank" rel="noopener noreferrer">
+          <a href="#" onclick="abrirWaModal(event)" class="btn-primario btn-whatsapp-cta" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-whatsapp" aria-hidden="true"></i> Solicitar peça pelo WhatsApp
           </a>
         </div>
@@ -514,7 +514,7 @@
           <a href="https://instagram.com/pecas_4057" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Sentrallis">
             <i class="fab fa-instagram" aria-hidden="true"></i>
           </a>
-          <a href="https://wa.me/55NUMERO_AQUI" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da Sentrallis">
+          <a href="#" onclick="abrirWaModal(event)" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da Sentrallis">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
           </a>
           <a href="mailto:pecas@sentrallis.com" aria-label="E-mail da Sentrallis">
@@ -529,9 +529,23 @@
   </footer>
 
   <!-- ===== WHATSAPP FLUTUANTE ===== -->
-  <a href="https://wa.me/55NUMERO_AQUI" class="whatsapp-flutuante" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Sentrallis pelo WhatsApp">
+  <a href="#" onclick="abrirWaModal(event)" class="whatsapp-flutuante" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Sentrallis pelo WhatsApp">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
+
+  <!-- ===== MODAL WHATSAPP ===== -->
+  <div id="wa-modal" class="wa-modal" aria-hidden="true" role="dialog" aria-label="Escolher contato WhatsApp">
+    <div class="wa-modal-box">
+      <p class="wa-modal-titulo"><i class="fab fa-whatsapp"></i> Escolha o contato</p>
+      <a href="https://wa.me/5531995669853" class="wa-modal-opcao" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> (31) 9 9566-9853
+      </a>
+      <a href="https://wa.me/5531973484868" class="wa-modal-opcao" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> (31) 9 7348-4868
+      </a>
+      <button class="wa-modal-fechar" id="waModalFechar">Cancelar</button>
+    </div>
+  </div>
 
   <!-- Rodapé MonteSite - Atualização Automática -->
   <div id="montesite-footer-badge"></div>

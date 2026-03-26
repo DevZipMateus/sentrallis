@@ -278,3 +278,26 @@ document.querySelectorAll(
 ).forEach(btn => {
   btn.addEventListener('click', criarRipple);
 });
+
+// ===== MODAL WHATSAPP =====
+const waModal      = document.getElementById('wa-modal');
+const waModalFechar = document.getElementById('waModalFechar');
+
+function abrirWaModal(e) {
+  e.preventDefault();
+  waModal.classList.add('ativo');
+  waModal.setAttribute('aria-hidden', 'false');
+}
+
+waModalFechar.addEventListener('click', fecharWaModal);
+waModal.addEventListener('click', function(e) {
+  if (e.target === waModal) fecharWaModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') fecharWaModal();
+});
+
+function fecharWaModal() {
+  waModal.classList.remove('ativo');
+  waModal.setAttribute('aria-hidden', 'true');
+}

@@ -1544,3 +1544,75 @@ body.lightbox-aberto { overflow: hidden; }
     background-attachment: scroll, scroll;
   }
 }
+
+/* ===== MODAL WHATSAPP ===== */
+.wa-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0,0,0,0.65);
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.wa-modal.ativo {
+  display: flex;
+}
+.wa-modal-box {
+  background: #1A1A1A;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  padding: 28px 24px;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: waSlideUp 0.22s ease;
+}
+@keyframes waSlideUp {
+  from { transform: translateY(18px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+.wa-modal-titulo {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.wa-modal-titulo i { color: #25D366; font-size: 18px; }
+.wa-modal-opcao {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 13px 20px;
+  border-radius: 10px;
+  transition: background 0.18s, transform 0.15s;
+}
+.wa-modal-opcao:hover { background: #1ebe5a; transform: translateY(-1px); }
+.wa-modal-opcao i { font-size: 18px; }
+.wa-modal-fechar {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.50);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.18s;
+  margin-top: 4px;
+}
+.wa-modal-fechar:hover { border-color: rgba(255,255,255,0.35); color: #fff; }
